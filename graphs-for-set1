@@ -1,0 +1,33 @@
+MAR20161T <- MAR20161[c(94),]# removes the total row and stores it in a new data frame
+MAR20161 <- MAR20161[-c(94),]
+#blue = total
+#red = female
+#green = male
+plot(x = MAR20161$Age , y = MAR20161$PT , xlab = "age", ylab = "Provisional Licences", main = "age vs provisionals 2016", type = "l", col = "blue")
+lines(x = MAR20161$Age , y = MAR20161$PF, col = "red")
+lines(x = MAR20161$Age , y = MAR20161$PM, col = "green")
+plot(x = MAR20161$Age , y = MAR20161$FT , xlab = "age", ylab = "Full Licences", main = "age vs full 2016", type = "l", col = "blue")
+lines(x = MAR20161$Age , y = MAR20161$FF, col = "red")
+lines(x = MAR20161$Age , y = MAR20161$FM, col = "green")
+
+plot(x = FEB20131$Age , y = FEB20131$PT , xlab = "age", ylab = "Provisional Licences", main = "age vs provisionals 2013", type = "l", col ="blue")
+lines(x = FEB20131$Age , y = FEB20131$PF , col = "red")
+lines(x = FEB20131$Age, y = FEB20131$PM , col = "green")
+plot(x = FEB20131$Age , y = FEB20131$FT , xlab = "age", ylab = "Full Licences", main = "age vs full 2013", type = "l", col ="blue")
+lines(x = FEB20131$Age , y = FEB20131$FF , col = "red")
+lines(x = FEB20131$Age, y = FEB20131$FM , col = "green")
+
+
+#purple = 2016
+#red = 2013
+plot (x = MAR20161$Age , y = MAR20161$PM,xlab = "age", ylab = "Provisional male"  , main = "male provisional comparison", type = "l" , col = "purple")
+lines(x = FEB20131$Age,y=FEB20131$PM, col = "red")
+
+plot (x = MAR20161$Age , y = MAR20161$PF,xlab = "age", ylab = "Provisional female"  , main = "female provisional comparison", type = "l" , col = "purple")
+lines( x = FEB20131$Age,y=FEB20131$PF,col = "red")
+
+plot (x = MAR20161$Age , y = MAR20161$FM,xlab = "age", ylab = "Full male"  , main = "male full comparison", type = "l" , col = "purple")
+lines(x = FEB20131$Age,y=FEB20131$FM, col = "red")
+
+plot (x = MAR20161$Age , y = MAR20161$FF,xlab = "age", ylab = "Full female"  , main = "female full comparison", type = "l" , col = "purple")
+lines(x = FEB20131$Age,y=FEB20131$FF, col = "red")
